@@ -1,1 +1,5 @@
-<p>landing works!</p>
+<h1>SwipHire</h1>
+
+<button (click) = "openModal()" class="login-btn">Log in</button>
+
+<app-auth-modal @if(isModalOpen) (close)="closeModal()"></app-auth-modal>
