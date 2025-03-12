@@ -1,5 +1,9 @@
-<div class="modal-backdrop" (click)="closeModal()"></div>
-<div class="modal-container">
-  <button class="close-btn" (click)="closeModal()">✕</button>
-  <h2>Sign In</h2>
-</div>
+<div class="modal-overlay" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <h2>Let's Start</h2>
+      <input type="text" placeholder="Username">
+      <input type="password" placeholder="Password">
+      <button class="submit-btn">Log in</button>
+      <button class="close-btn" (click)="closeModal()">X</button>
+    </div>
+  </div>

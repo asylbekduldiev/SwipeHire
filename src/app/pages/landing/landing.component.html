@@ -1,5 +1,9 @@
-<h1>SwipHire</h1>
+<div class="landing-container">
+    <img src="" alt="">
+    <h1>SwipHire</h1>
+    <button (click) = "openModal()" class="login-btn">Log in</button>
+</div>
 
-<button (click) = "openModal()" class="login-btn">Log in</button>
-
-<app-auth-modal @if(isModalOpen) (close)="closeModal()"></app-auth-modal>
+@if(isModalOpen){
+    <app-auth-modal (close)="closeModal()"></app-auth-modal>
+}

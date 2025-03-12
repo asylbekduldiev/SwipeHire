@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { AuthModalComponent } from './auth/auth-modal.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-landing',
-  imports: [AuthModalComponent],
+  imports: [CommonModule, AuthModalComponent],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
 })
