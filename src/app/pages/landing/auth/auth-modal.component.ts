@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Output, ViewChild, AfterViewInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild, AfterViewInit } from '@angular/core';
 import gsap from 'gsap';
 
 @Component({
@@ -6,19 +6,13 @@ import gsap from 'gsap';
   templateUrl: './auth-modal.component.html',
   styleUrl: './auth-modal.component.scss'
 })
-export class AuthModalComponent implements AfterViewInit, OnChanges {
+export class AuthModalComponent implements AfterViewInit {
   @Output() close = new EventEmitter<void>();
   @ViewChild('modalOverlay', { static: false }) modalOverlay!: ElementRef;
   @ViewChild('modalContent', { static: false }) modalContent!: ElementRef;
 
   ngAfterViewInit() {
     this.animateOpen();
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    if (changes['isOpen'] && changes['isOpen'].currentValue) {
-      this.animateOpen();
-    }
   }
 
   closeModal() {
@@ -45,4 +39,5 @@ export class AuthModalComponent implements AfterViewInit, OnChanges {
 
     gsap.to(this.modalOverlay.nativeElement, { opacity: 0, duration: 0.2 });
   }
+  
 }
