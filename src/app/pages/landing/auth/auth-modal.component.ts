@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Output, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild, AfterViewInit} from '@angular/core';
 import gsap from 'gsap';
 
 @Component({
@@ -10,6 +10,7 @@ export class AuthModalComponent implements AfterViewInit {
   @Output() close = new EventEmitter<void>();
   @ViewChild('modalOverlay', { static: false }) modalOverlay!: ElementRef;
   @ViewChild('modalContent', { static: false }) modalContent!: ElementRef;
+
 
   ngAfterViewInit() {
     this.animateOpen();
@@ -39,5 +40,6 @@ export class AuthModalComponent implements AfterViewInit {
 
     gsap.to(this.modalOverlay.nativeElement, { opacity: 0, duration: 0.2 });
   }
-  
+
+
 }

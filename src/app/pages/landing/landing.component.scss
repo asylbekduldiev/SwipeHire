@@ -1,10 +1,14 @@
 .landing-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
     display: flex;
-    // align-items: center; 
     justify-content: space-between;
-    height: 100vh;
-    padding: 20px 20px 0px 20px; 
-    background-color: #f5f5f5;
+    align-items: center;
+    padding: 15px 20px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
 }
 
 .landing-container h1 {
