@@ -41,5 +41,4 @@ export class AuthModalComponent implements AfterViewInit {
     gsap.to(this.modalOverlay.nativeElement, { opacity: 0, duration: 0.2 });
   }
 
-
 }
