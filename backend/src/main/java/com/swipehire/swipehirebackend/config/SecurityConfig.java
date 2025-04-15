@@ -1,0 +1,1 @@
+package com.swipehire.swipehirebackend.config;public class SecurityConfig {}
