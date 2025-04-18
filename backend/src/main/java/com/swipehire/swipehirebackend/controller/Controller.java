@@ -1,4 +1,4 @@
-package com.swipehire.swipehirebackend;
+package com.swipehire.swipehirebackend.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.GetMapping;
