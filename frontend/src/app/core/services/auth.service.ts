@@ -10,7 +10,7 @@ import { TokenResponse } from '../models/Auth.interface';
 export class AuthService {
   private isLoggedIn = false
   private http = inject(HttpClient)
-  private baseUrl = 'http://localhost:3000'
+  private baseUrl = 'http://localhost:5432'
 
   constructor() {}
 
